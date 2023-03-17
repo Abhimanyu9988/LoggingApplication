@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logmonitoringapp
+  labels:
+    app: logmonitoringapp
+  namespace: abhi-java-apps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logmonitoringapp
+  template:
+    metadata:
+      labels:
+        app: logmonitoringapp
+    spec:
+      containers:
+      - name: logmonitoringapp
+        image: docker.io/abhimanyubajaj98/logmonitoringapp
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lomonitoringapp-service
+  labels:
+    app: lomonitoringapp
+  namespace: abhi-java-apps
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: lomonitoringapp
