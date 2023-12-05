@@ -37,3 +37,16 @@ Follow these instructions to set up and run the Logging Application on your loca
    ```bash
    git clone https://github.com/Abhimanyu9988/LoggingApplication.git
 
+
+### Usage
+####Running Locally
+
+1. Navigate to the project directory:
+```
+cd LoggingApplication
+```
+
+2. Run the application:
+```
+java -jar log4j-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+```
