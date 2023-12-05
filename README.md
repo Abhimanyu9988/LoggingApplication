@@ -14,8 +14,6 @@ A Java application that demonstrates logging using log4j.
   - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
@@ -39,7 +37,7 @@ Follow these instructions to set up and run the Logging Application on your loca
 
 
 ### Usage
-####Running Locally
+#### Running Locally
 
 1. Navigate to the project directory:
 ```
@@ -50,3 +48,14 @@ cd LoggingApplication
 ```
 java -jar log4j-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 ```
+
+#### Running with Docker
+```
+docker run -d -p 8080:8080 logging-application
+```
+
+
+### Configuration
+The application uses log4j for logging. You can customize the logging configuration by modifying the log4j.xml file or log4j.properties file, depending on your preferences.
+
+
